@@ -3,83 +3,99 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Tavolo — strumenti per LaTeX</title>
-<meta name="description" content="Tavolo: strumenti visuali per lavorare con LaTeX, equazioni e disegni TikZ.">
+<title>Giovanni Antonio Zoccola — Tavolo Studio</title>
+<meta name="description" content="Il sito personale di Giovanni Antonio Zoccola e Tavolo Studio, una raccolta di strumenti visuali per LaTeX, formule matematiche e disegni TikZ.">
 <meta name="theme-color" content="#e9ecf1">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600&family=Schibsted+Grotesk:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@1,9..144,600&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box}
-:root{color-scheme:light;--bg:#e9ecf1;--panel:#f8f9fb;--panel2:#eff1f5;--ink:#1a2130;--muted:#657086;--line:#d3d8e1;--accent:#2453c4;--paper:#fff;--code:"JetBrains Mono",ui-monospace,monospace;--ui:"Schibsted Grotesk",system-ui,sans-serif;--display:"Fraunces",Georgia,serif}
+:root{color-scheme:light;--bg:#e9ecf1;--panel:#f8f9fb;--panel2:#eff1f5;--ink:#1a2130;--muted:#657086;--line:#d3d8e1;--accent:#2453c4;--code:"JetBrains Mono",ui-monospace,monospace;--ui:"Schibsted Grotesk",system-ui,sans-serif;--display:"Fraunces",Georgia,serif}
 *{margin:0}
-body{min-height:100vh;background:var(--bg);color:var(--ink);font:15px/1.55 var(--ui)}
+body{min-height:100vh;background:var(--bg);color:var(--ink);font:15px/1.6 var(--ui)}
 a{color:inherit}
 .top{display:flex;align-items:center;gap:12px;padding:15px clamp(18px,5vw,64px);background:var(--panel);border-bottom:1px solid var(--line)}
 .brand{font:italic 600 23px var(--display);letter-spacing:.1px}.brand b{font:600 13px var(--code);font-style:normal;color:var(--accent);margin-left:5px}
 .top-note{margin-left:auto;color:var(--muted);font-size:12px;font-family:var(--code)}
-main{width:min(1050px,calc(100% - 36px));margin:clamp(36px,8vw,86px) auto 54px}
-.intro{max-width:720px;margin:0 0 34px}
+main{width:min(1000px,calc(100% - 36px));margin:clamp(35px,7vw,76px) auto 44px}
 .eyebrow{display:flex;align-items:center;gap:9px;color:var(--muted);font:11px var(--code);text-transform:uppercase;letter-spacing:.1em;margin-bottom:17px}
 .eyebrow:before{content:"";width:24px;height:1px;background:var(--accent)}
-h1{font-size:clamp(38px,7vw,68px);line-height:1.04;letter-spacing:-.055em;font-weight:600;max-width:740px}
+.intro{max-width:760px;padding-bottom:clamp(38px,7vw,70px)}
+h1{font-size:clamp(38px,7vw,66px);line-height:1.05;letter-spacing:-.055em;font-weight:600;max-width:760px}
 h1 em{font-family:var(--display);font-weight:600;letter-spacing:-.045em;color:var(--accent)}
-.lead{font-size:clamp(16px,2vw,18px);color:var(--muted);max-width:570px;margin-top:20px}
-.section-head{display:flex;align-items:center;gap:12px;margin:0 0 13px;color:var(--muted);font:11px var(--code);letter-spacing:.08em;text-transform:uppercase}
+.role{margin-top:19px;font:12px var(--code);color:var(--accent);letter-spacing:.025em}
+.lead{font-size:clamp(16px,2vw,18px);color:var(--muted);max-width:650px;margin-top:14px}
+.personal-links{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px}
+.small-link{display:inline-flex;align-items:center;gap:9px;text-decoration:none;padding:8px 12px;border:1px solid var(--line);border-radius:5px;background:var(--panel);font-size:12px;font-weight:600;transition:border-color .18s,background .18s}
+.small-link:hover{border-color:var(--accent);background:var(--panel2)}
+.section{border-top:1px solid var(--line);padding-top:27px}
+.section-head{display:flex;align-items:center;gap:12px;margin:0 0 9px;color:var(--muted);font:11px var(--code);letter-spacing:.08em;text-transform:uppercase}
 .section-head:after{content:"";height:1px;background:var(--line);flex:1}
+h2.section-title{font-size:clamp(30px,5vw,44px);line-height:1.12;letter-spacing:-.045em;font-weight:600}
+.section-intro{color:var(--muted);margin-top:9px;margin-bottom:23px;max-width:600px}
 .projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-.project{background:var(--panel);border:1px solid var(--line);border-radius:8px;overflow:hidden;display:flex;flex-direction:column;min-height:300px;transition:border-color .18s,transform .18s,box-shadow .18s}
+.project{background:var(--panel);border:1px solid var(--line);border-radius:7px;overflow:hidden;display:flex;flex-direction:column;min-height:270px;transition:border-color .18s,transform .18s,box-shadow .18s}
 .project:hover{border-color:#9aaedc;transform:translateY(-2px);box-shadow:0 10px 28px #1a21300d}
-.cardtop{display:flex;align-items:center;justify-content:space-between;padding:12px 15px;background:var(--panel2);border-bottom:1px solid var(--line);font:11px var(--code);color:var(--muted)}
+.cardtop{display:flex;align-items:center;justify-content:space-between;padding:11px 14px;background:var(--panel2);border-bottom:1px solid var(--line);font:11px var(--code);color:var(--muted)}
 .status{display:flex;align-items:center;gap:7px}.dot{width:6px;height:6px;border-radius:50%;background:#23804a}
 .index{font:11px var(--code);color:#8b93a5}
-.cardbody{padding:25px 24px 20px;display:flex;flex-direction:column;flex:1}
-.glyph{height:63px;width:63px;display:grid;place-items:center;background:#e8edf9;border:1px solid #d3ddf3;border-radius:7px;color:var(--accent);font:600 25px var(--code);margin-bottom:22px}
-.project h2{font-size:25px;letter-spacing:-.04em;font-weight:600;margin-bottom:9px}.project p{color:var(--muted);font-size:14px;max-width:390px}
-.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:17px}.tag{border:1px solid var(--line);background:var(--panel2);border-radius:4px;padding:4px 7px;font:10px var(--code);color:var(--muted)}
-.open{margin-top:auto;padding-top:25px;display:flex;align-items:center;justify-content:space-between;text-decoration:none;font-size:13px;font-weight:600;color:var(--accent)}
-.open span:last-child{display:grid;place-items:center;width:30px;height:30px;border:1px solid var(--line);border-radius:5px;background:var(--panel2);font-size:18px;transition:background .18s,color .18s}
-.open:hover span:last-child{background:var(--accent);color:#fff;border-color:var(--accent)}
+.cardbody{padding:22px 22px 18px;display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.glyph{height:55px;width:55px;display:grid;place-items:center;background:#e8edf9;border:1px solid #d3ddf3;border-radius:6px;color:var(--accent);font:600 22px var(--code);margin-bottom:18px}
+.project h3{font-size:23px;letter-spacing:-.04em;font-weight:600;margin-bottom:8px}.project p{color:var(--muted);font-size:14px;max-width:390px}
+.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px}.tag{border:1px solid var(--line);background:var(--panel2);border-radius:4px;padding:3px 7px;font:10px var(--code);color:var(--muted)}
+.open{margin-top:auto;padding:21px 0 0;text-decoration:none}
+.open span{display:inline-flex;align-items:center;gap:12px;background:var(--accent);color:white;border:1px solid var(--accent);border-radius:5px;padding:9px 13px;font-size:12px;font-weight:600;transition:filter .18s}
+.open:hover span{filter:brightness(1.1)}.arrow{font-size:16px;line-height:1}
 .foot{margin-top:34px;padding-top:14px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;color:var(--muted);font:11px var(--code)}
-@media(max-width:650px){.top{padding:13px 18px}.top-note{font-size:10px}main{margin-top:42px}.projects{grid-template-columns:1fr}.project{min-height:270px}.cardbody{padding:21px}.foot{flex-direction:column;gap:5px}}
+@media(max-width:650px){.top{padding:13px 18px}.top-note{font-size:10px}main{margin-top:38px}.intro{padding-bottom:42px}.projects{grid-template-columns:1fr}.project{min-height:245px}.cardbody{padding:20px}.foot{flex-direction:column;gap:5px}}
 @media(prefers-color-scheme:dark){:root{color-scheme:dark;--bg:#101319;--panel:#181c24;--panel2:#1f242e;--ink:#e2e6ee;--muted:#8a93a6;--line:#2c323e;--accent:#8fb0ff}.glyph{background:#202b42;border-color:#33466d}.dot{background:#5fd38d}.project:hover{border-color:#50658f;box-shadow:0 10px 28px #0003}}
 </style>
 </head>
 <body>
 <header class="top">
-  <div class="brand">Tavolo <b>STUDIO</b></div>
-  <div class="top-note">strumenti per LaTeX</div>
+  <div class="brand">Giovanni <b>ZOCCOLA</b></div>
+  <div class="top-note">informatico · sviluppatore</div>
 </header>
 <main>
-  <section class="intro">
-    <div class="eyebrow">Due strumenti · un unico banco di lavoro</div>
-    <h1>LaTeX, senza perdere il filo. <em>Disegna e scrivi.</em></h1>
-    <p class="lead">Un piccolo spazio di lavoro per costruire formule ed esplorare disegni: modifica in modo visuale e lascia che il codice LaTeX segua le tue idee.</p>
+  <section class="intro" aria-labelledby="intro-title">
+    <div class="eyebrow">Piacere di conoscerti</div>
+    <h1>Ciao, sono <em>Giovanni Antonio Zoccola.</em></h1>
+    <p class="role">INFORMATICO · SVILUPPATORE · PROBLEM SOLVER</p>
+    <p class="lead">Sono un informatico appassionato di tecnologia e sviluppo software. Mi piace trasformare le idee in strumenti pratici, scrivere codice pulito e sperimentare nuove soluzioni. Qui raccolgo alcuni progetti a cui sto lavorando.</p>
+    <div class="personal-links">
+      <a class="small-link" href="https://github.com/giozoc">GitHub <span aria-hidden="true">↗</span></a>
+      <a class="small-link" href="https://www.linkedin.com/in/giozoc">LinkedIn <span aria-hidden="true">↗</span></a>
+    </div>
   </section>
-  <div class="section-head">I progetti</div>
-  <section class="projects" aria-label="Progetti">
-    <article class="project">
-      <div class="cardtop"><span class="status"><i class="dot"></i> editor di equazioni</span><span class="index">01 / 02</span></div>
-      <div class="cardbody">
-        <div class="glyph" aria-hidden="true">∑x²</div>
-        <h2>Tavolo MathTeX</h2>
-        <p>Scrivi il codice LaTeX o modifica direttamente la formula. Le due viste restano sincronizzate, con anteprima e strumenti per simboli e strutture matematiche.</p>
-        <div class="tags"><span class="tag">LaTeX</span><span class="tag">MathLive</span><span class="tag">MathJax</span></div>
-        <a class="open" href="https://giozoc.github.io/tavolo-mathtex/"><span>Apri MathTeX</span><span aria-hidden="true">↗</span></a>
-      </div>
-    </article>
-    <article class="project">
-      <div class="cardtop"><span class="status"><i class="dot"></i> editor grafico</span><span class="index">02 / 02</span></div>
-      <div class="cardbody">
-        <div class="glyph" aria-hidden="true">⌁↗</div>
-        <h2>Tavolo TikZ</h2>
-        <p>Crea diagrammi e figure con strumenti visuali: sposta elementi, disegna forme e grafici, e ottieni il codice TikZ da rifinire o riutilizzare nei tuoi documenti.</p>
-        <div class="tags"><span class="tag">TikZ</span><span class="tag">pgfplots</span><span class="tag">diagrammi</span></div>
-        <a class="open" href="https://giozoc.github.io/tavolo-tikz/"><span>Apri TikZ</span><span aria-hidden="true">↗</span></a>
-      </div>
-    </article>
+  <section class="section" aria-labelledby="studio-title">
+    <div class="section-head">I miei progetti</div>
+    <h2 class="section-title" id="studio-title">Tavolo <em style="font-family:var(--display);color:var(--accent)">Studio.</em></h2>
+    <p class="section-intro">Due strumenti visuali per lavorare con LaTeX: costruisci formule matematiche e disegni TikZ direttamente dal browser, con il codice sempre a portata di mano.</p>
+    <div class="projects">
+      <article class="project">
+        <div class="cardtop"><span class="status"><i class="dot"></i> editor di equazioni</span><span class="index">01 / 02</span></div>
+        <div class="cardbody">
+          <div class="glyph" aria-hidden="true">∑x²</div>
+          <h3>Tavolo MathTeX</h3>
+          <p>Scrivi il codice LaTeX o modifica direttamente la formula. Le due viste restano sincronizzate, con anteprima e strumenti per simboli e strutture matematiche.</p>
+          <div class="tags"><span class="tag">LaTeX</span><span class="tag">MathLive</span><span class="tag">MathJax</span></div>
+          <a class="open" href="https://giozoc.github.io/tavolo-mathtex/"><span>Apri MathTeX <b class="arrow" aria-hidden="true">↗</b></span></a>
+        </div>
+      </article>
+      <article class="project">
+        <div class="cardtop"><span class="status"><i class="dot"></i> editor grafico</span><span class="index">02 / 02</span></div>
+        <div class="cardbody">
+          <div class="glyph" aria-hidden="true">⌁↗</div>
+          <h3>Tavolo TikZ</h3>
+          <p>Crea diagrammi e figure con strumenti visuali: sposta elementi, disegna forme e grafici, e ottieni il codice TikZ da rifinire o riutilizzare nei tuoi documenti.</p>
+          <div class="tags"><span class="tag">TikZ</span><span class="tag">pgfplots</span><span class="tag">diagrammi</span></div>
+          <a class="open" href="https://giozoc.github.io/tavolo-tikz/"><span>Apri TikZ <b class="arrow" aria-hidden="true">↗</b></span></a>
+        </div>
+      </article>
+    </div>
   </section>
-  <footer class="foot"><span>TAVOLO / LABORATORIO LATEX</span><span>Due progetti indipendenti, stesso approccio visuale.</span></footer>
+  <footer class="foot"><span>GIOVANNI ANTONIO ZOCCOLA</span><span>TAVOLO STUDIO / LABORATORIO LATEX</span></footer>
 </main>
 </body>
 </html>
